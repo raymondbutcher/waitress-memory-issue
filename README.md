@@ -10,13 +10,17 @@ This creates a Falcon web app with a 11 KB JSON response. It demonstrates an iss
     * Direnv can automate this.
     * Otherwise install packages listed in `requirements.txt`.
 2. Open 3 terminals.
-3. Run `make serve` in the 1st terminal and leave it running.
+3. Run `make server-8k` or `make server-16k` in the 1st terminal and leave it running.
 4. Run `make load` in the 2nd terminal and leave it running.
-5. Occasionally run `make check` in the 3rd terminal to see how much memory it is using.
+5. Wait 10 seconds or so and then run `make check` in the 3rd terminal to see how much memory it is using.
 
 ## Results
 
-After only a few seconds, `make check` returns something like this:
+If you ran `make server-8k` then memory usage is probably low.
+
+If you ran `make server-16k` then memory usage is probably high.
+
+`make check` returns something like this:
 
 ```
 Top 5 lines
